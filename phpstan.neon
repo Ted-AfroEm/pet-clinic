@@ -1,0 +1,25 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - vendor/nesbot/carbon/extension.neon
+
+parameters:
+
+    paths:
+        - app/
+
+    # Level 10 is the highest level
+    level: 5
+
+#    ignoreErrors:
+#        - '#PHPDoc tag @var#'
+#
+#    excludePaths:
+#        - ./*/*/FileToBeExcluded.php
+
+# --- How to Run ---
+#
+# 3: Finally, you may start analyzing your code using the phpstan console command:
+# ./vendor/bin/phpstan analyse
+#
+# If you are getting the error Allowed memory size exhausted, then you can use the --memory-limit option fix the problem:
+# ./vendor/bin/phpstan analyse --memory-limit=2G
