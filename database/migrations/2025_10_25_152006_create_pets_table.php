@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->date('date_of_birth');
-            $table->string('type');
+            $table->string('species');
             $table->string('avatar')->nullable();
 
             $table->foreignId('owner_id')

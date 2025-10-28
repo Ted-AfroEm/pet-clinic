@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\PetSpecies;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -14,7 +15,7 @@ class Pet extends Model
     protected $fillable = [
         'name',
         'date_of_birth',
-        'type',
+        'species',
         'avatar',
         'owner_id',
     ];
@@ -26,6 +27,7 @@ class Pet extends Model
      */
     protected $casts = [
         'date_of_birth' => 'date',
+        'species' => PetSpecies::class,
     ];
 
     /**
